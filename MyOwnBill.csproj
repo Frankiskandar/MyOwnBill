@@ -101,6 +101,7 @@
     <Compile Include="Assets\Common\TapHandler.cs" />
     <Compile Include="Assets\Common\TrackableSettings.cs" />
     <Compile Include="Assets\ImageTargetPlayAudio.cs" />
+    <Compile Include="Assets\PlayButtonScript.cs" />
     <Compile Include="Assets\Scripts\PlayVideo.cs" />
     <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\VideoPlaybackMenuOptions.cs" />

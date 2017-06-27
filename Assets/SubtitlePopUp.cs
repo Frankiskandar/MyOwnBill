@@ -11,6 +11,7 @@ public class SubtitlePopUp : MonoBehaviour,  ITrackableEventHandler
     private TrackableBehaviour mTrackableBehaviour;
     private GameObject background_obj;
     private GameObject subtitle_obj;
+    private GameObject play_button;
     string text = "Hello my name is Barrack Obama \n don't forget to vote!";
 
 	// Use this for initialization
@@ -24,12 +25,15 @@ public class SubtitlePopUp : MonoBehaviour,  ITrackableEventHandler
 
         background_obj = GameObject.Find("background");
         subtitle_obj = GameObject.Find("subtitle");
+        play_button = GameObject.Find("PlayButton");
 
         //set default states of UI 
         background_obj.SetActive(false);
         background_obj.transform.parent.gameObject.SetActive(false);
         subtitle_obj.SetActive(false);
         subtitle_obj.transform.parent.gameObject.SetActive(false);
+        play_button.SetActive(false);
+        play_button.transform.parent.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +50,8 @@ public class SubtitlePopUp : MonoBehaviour,  ITrackableEventHandler
         {
             // if image target is being tracked
             ShowSubtitle(text);
+            play_button.SetActive(true);
+            play_button.transform.parent.gameObject.SetActive(true);
         }
         else
         {
